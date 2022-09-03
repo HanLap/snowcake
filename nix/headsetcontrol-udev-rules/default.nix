@@ -94,7 +94,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    install -D ${filename} $out/lib/udev/${filename}
+    install -D ${filename} $out/lib/udev/rules.d/${filename}
     runHook postInstall
   '';
 }
